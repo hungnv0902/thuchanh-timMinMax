@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function findMin(arr) {
+            let min = arr[0];
+            for(let i = 0; i < arr.length; i ++) {
+                if (min > arr[i]) {
+                    min = arr[i]
+                }
+            }
+            return min
+        };
+
+        function findMax(arr) {
+            let max = arr[0];
+            for(let i = 0; i < arr.length; i ++) {
+                if (max < arr[i]) {
+                    max = arr[i]
+                }
+            }
+            return max
+        }
+
+        let nums = [];
+
+        for(let i = 0; i < 100; i ++) {
+            nums[i] = Math.floor(Math.random()*100);
+        }
+
+        let min = findMin(nums);
+        let max = findMax(nums);
+
+        console.log("Min la " + min );
+        console.log("Max la " + max);
+    </script>
+</body>
+</html>
